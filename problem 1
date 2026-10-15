@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int i = 0;
+    while (i < n - 1) {
+        cout << 'a';
+        i++;
+    }
+
+    cout << (n % 2 == 0 ? 'b' : 'a') << '\n';
+
+    return 0;
+}
