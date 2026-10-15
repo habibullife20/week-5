@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int zeros = 0;
+    int divisor = 5;
+
+    while (divisor <= n) {
+        zeros = zeros + (n / divisor);
+        divisor = divisor * 5;
+    }
+
+    cout << zeros << endl;
+
+    return 0;
+}
