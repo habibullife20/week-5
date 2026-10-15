@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int b_count = 0, a_count = 0, l_count = 0, o_count = 0, n_count = 0;
+
+    int i = 0;
+    while (i < n) {
+        char c;
+        cin >> c;
+
+        switch (c) {
+            case 'b': b_count++; break;
+            case 'a': a_count++; break;
+            case 'l': l_count++; break;
+            case 'o': o_count++; break;
+            case 'n': n_count++; break;
+            default: break;
+        }
+        i++;
+    }
+
+    l_count = l_count / 2;
+    o_count = o_count / 2;
+
+    int max_words = b_count;
+    if (a_count < max_words) max_words = a_count;
+    if (l_count < max_words) max_words = l_count;
+    if (o_count < max_words) max_words = o_count;
+    if (n_count < max_words) max_words = n_count;
+
+    cout << max_words << '\n';
+
+    return 0;
+}
