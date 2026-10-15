@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long x;
+    cin >> x;
+
+    if (x < 0) {
+        cout << "false";
+        return 0;
+}
+
+    long long original_x = x;
+    long long reversed_x = 0;
+
+    while (x > 0) {
+        long long digit = x % 10;
+        reversed_x = (reversed_x * 10) + digit;
+        x /= 10;
+    }
+
+    if (original_x == reversed_x) {
+        cout << "true";
+    } else {
+        cout << "false";
+    }
+
+    return 0;
+}
